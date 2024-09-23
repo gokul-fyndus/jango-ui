@@ -1,0 +1,2731 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+    "title": "Spring Boot REST API",
+    "description": "Sample API for Spring Boot 3.x with springdoc-openapi",
+    "version": "1.0"
+    },
+    "servers": [
+    {
+    "url": "http://localhost:8081",
+    "description": "Generated server url"
+    }
+    ],
+    "paths": {
+    "/api/v2/work-order/{isRemove}": {
+    "put": {
+    "tags": [
+    "work-order-controller"
+    ],
+    "operationId": "deleteWorkOrder",
+    "parameters": [
+    {
+    "name": "isRemove",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/work-order-update/{id}": {
+    "put": {
+    "tags": [
+    "work-order-controller"
+    ],
+    "operationId": "updateWorkOrder",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/WorkOrderDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/vendor/{id}": {
+    "get": {
+    "tags": [
+    "vendor-controller"
+    ],
+    "operationId": "getVendor",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "put": {
+    "tags": [
+    "vendor-controller"
+    ],
+    "operationId": "updateVendor",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/VendorDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "delete": {
+    "tags": [
+    "vendor-controller"
+    ],
+    "operationId": "deleteVendor",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/update-delivery-status": {
+    "put": {
+    "tags": [
+    "delivery-controller"
+    ],
+    "operationId": "changeDeliveryStatus",
+    "parameters": [
+    {
+    "name": "deliveryStatus",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    },
+    {
+    "name": "deliveryId",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/specification/{specificationId}": {
+    "get": {
+    "tags": [
+    "specifiaction-controller"
+    ],
+    "operationId": "getSpecificationId",
+    "parameters": [
+    {
+    "name": "specificationId",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "put": {
+    "tags": [
+    "specifiaction-controller"
+    ],
+    "operationId": "updateSpecification",
+    "parameters": [
+    {
+    "name": "specificationId",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/SpecificationDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/specification-delete/{specificationId}": {
+    "put": {
+    "tags": [
+    "specifiaction-controller"
+    ],
+    "operationId": "deleteSpecification",
+    "parameters": [
+    {
+    "name": "specificationId",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/remove-order-detail/{id}": {
+    "put": {
+    "tags": [
+    "order-detail-controller"
+    ],
+    "operationId": "deleteOrderDetail",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/quotation-detail/{quotationDetailId}": {
+    "get": {
+    "tags": [
+    "quotation-detail-controller"
+    ],
+    "operationId": "getQuotationDetailById",
+    "parameters": [
+    {
+    "name": "quotationDetailId",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "put": {
+    "tags": [
+    "quotation-detail-controller"
+    ],
+    "operationId": "updateQuotationDetails",
+    "parameters": [
+    {
+    "name": "quotationDetailId",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/QuotationDetailDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/quotation-delete/{quotationDetailId}": {
+    "put": {
+    "tags": [
+    "quotation-detail-controller"
+    ],
+    "operationId": "deleteQuotationDetail",
+    "parameters": [
+    {
+    "name": "quotationDetailId",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/pricing/{id}": {
+    "put": {
+    "tags": [
+    "pricing-controller"
+    ],
+    "operationId": "updatePricing",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/PricingDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "delete": {
+    "tags": [
+    "pricing-controller"
+    ],
+    "operationId": "deleteOrder",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/order/{id}": {
+    "get": {
+    "tags": [
+    "order-information-controller"
+    ],
+    "operationId": "retrieveOrder",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "put": {
+    "tags": [
+    "order-information-controller"
+    ],
+    "operationId": "updateOrder",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/OrderInformationDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "delete": {
+    "tags": [
+    "order-information-controller"
+    ],
+    "operationId": "deleteOrder_1",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/order-work-flow/{isRemove}": {
+    "put": {
+    "tags": [
+    "order-work-flow-controller"
+    ],
+    "operationId": "deleteOrderWorkFlow",
+    "parameters": [
+    {
+    "name": "isRemove",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/order-work-flow-update/{id}": {
+    "put": {
+    "tags": [
+    "order-work-flow-controller"
+    ],
+    "operationId": "updateOrderWorkFlow",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/OrderWorkFlowDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/order-detail/{orderDetailId}": {
+    "put": {
+    "tags": [
+    "order-detail-controller"
+    ],
+    "operationId": "updateOrderDetail",
+    "parameters": [
+    {
+    "name": "orderDetailId",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/OrderDetailDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/material-request/{id}": {
+    "put": {
+    "tags": [
+    "material-request-controller"
+    ],
+    "operationId": "editMaterial",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/MaterialRequestDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/inventory/{id}": {
+    "put": {
+    "tags": [
+    "inventory-controller"
+    ],
+    "operationId": "updateInventory",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/InventoryDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "delete": {
+    "tags": [
+    "inventory-controller"
+    ],
+    "operationId": "deleteInventory",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v1/employee/{id}": {
+    "put": {
+    "tags": [
+    "employee-controller"
+    ],
+    "operationId": "updateEmployee",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/Employee"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/work-order": {
+    "get": {
+    "tags": [
+    "work-order-controller"
+    ],
+    "operationId": "getWorkOrder",
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "post": {
+    "tags": [
+    "work-order-controller"
+    ],
+    "operationId": "CreateWorkOrder",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/WorkOrderDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/vendor": {
+    "get": {
+    "tags": [
+    "vendor-controller"
+    ],
+    "operationId": "getVendorList",
+    "parameters": [
+    {
+    "name": "paginationDTO",
+    "in": "query",
+    "required": true,
+    "schema": {
+    "$ref": "#/components/schemas/PaginationDTO"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "post": {
+    "tags": [
+    "vendor-controller"
+    ],
+    "operationId": "createVendor",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/VendorDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/specification": {
+    "get": {
+    "tags": [
+    "specifiaction-controller"
+    ],
+    "operationId": "getSpecification",
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "post": {
+    "tags": [
+    "specifiaction-controller"
+    ],
+    "operationId": "setSpecification",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/SpecificationDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/quotation-detail": {
+    "get": {
+    "tags": [
+    "quotation-detail-controller"
+    ],
+    "operationId": "getQuotationDetail",
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "post": {
+    "tags": [
+    "quotation-detail-controller"
+    ],
+    "operationId": "createQuotationDetail",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/QuotationDetailDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/order": {
+    "post": {
+    "tags": [
+    "order-information-controller"
+    ],
+    "operationId": "createOrder",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/OrderInformationDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/order-work-flow": {
+    "get": {
+    "tags": [
+    "order-work-flow-controller"
+    ],
+    "operationId": "GetOrderWorkFlow",
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "post": {
+    "tags": [
+    "order-work-flow-controller"
+    ],
+    "operationId": "CreateOrderWorkFlow",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/OrderWorkFlowDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/order-detail": {
+    "get": {
+    "tags": [
+    "order-detail-controller"
+    ],
+    "operationId": "getWorkOrder_1",
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "post": {
+    "tags": [
+    "order-detail-controller"
+    ],
+    "operationId": "createOrderDetail",
+    "parameters": [
+    {
+    "name": "order",
+    "in": "query",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "required": [
+    "file"
+    ],
+    "type": "object",
+    "properties": {
+    "file": {
+    "type": "string",
+    "format": "binary"
+    }
+    }
+    }
+    }
+    }
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/inventory": {
+    "get": {
+    "tags": [
+    "inventory-controller"
+    ],
+    "operationId": "getInventory",
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    },
+    "post": {
+    "tags": [
+    "inventory-controller"
+    ],
+    "operationId": "createInventory",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/InventoryDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/create/material-request": {
+    "post": {
+    "tags": [
+    "material-request-controller"
+    ],
+    "operationId": "createMaterial",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/MaterialRequestDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/create-pricing": {
+    "post": {
+    "tags": [
+    "pricing-controller"
+    ],
+    "operationId": "createPricing",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/PricingDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/create-delivery": {
+    "post": {
+    "tags": [
+    "delivery-controller"
+    ],
+    "operationId": "createDelivery",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/DeliveryDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v1/create-employee": {
+    "post": {
+    "tags": [
+    "employee-controller"
+    ],
+    "operationId": "createEmployee",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/EmployeeDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v1/create-customer": {
+    "post": {
+    "tags": [
+    "customer-controller"
+    ],
+    "operationId": "createCustomer",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/CustomerDTO"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/work-order/{id}": {
+    "get": {
+    "tags": [
+    "work-order-controller"
+    ],
+    "operationId": "retrieveWorkOrderId",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/work-order-search": {
+    "get": {
+    "tags": [
+    "work-order-controller"
+    ],
+    "operationId": "searchWorkOrder",
+    "parameters": [
+    {
+    "name": "search",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    },
+    {
+    "name": "page",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32"
+    }
+    },
+    {
+    "name": "size",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32"
+    }
+    },
+    {
+    "name": "sortField",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string",
+    "default": "status"
+    }
+    },
+    {
+    "name": "sortDirection",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string",
+    "default": "asc"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/vendor/search": {
+    "get": {
+    "tags": [
+    "vendor-controller"
+    ],
+    "operationId": "searchVendor",
+    "parameters": [
+    {
+    "name": "paginationDTO",
+    "in": "query",
+    "required": true,
+    "schema": {
+    "$ref": "#/components/schemas/PaginationDTO"
+    }
+    },
+    {
+    "name": "search",
+    "in": "query",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/specification/search": {
+    "get": {
+    "tags": [
+    "specifiaction-controller"
+    ],
+    "operationId": "getSpecificationInfo",
+    "parameters": [
+    {
+    "name": "search",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    },
+    {
+    "name": "pageNo",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32",
+    "default": 0
+    }
+    },
+    {
+    "name": "pageSize",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32",
+    "default": 5
+    }
+    },
+    {
+    "name": "fieldName",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string",
+    "default": "id"
+    }
+    },
+    {
+    "name": "direction",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string",
+    "default": "ASC",
+    "enum": [
+    "ASC",
+    "DESC"
+    ]
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/search-order": {
+    "get": {
+    "tags": [
+    "order-detail-controller"
+    ],
+    "operationId": "searchOrderDetail",
+    "parameters": [
+    {
+    "name": "search",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    },
+    {
+    "name": "page",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32"
+    }
+    },
+    {
+    "name": "size",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32"
+    }
+    },
+    {
+    "name": "sortField",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string",
+    "default": "createdAt"
+    }
+    },
+    {
+    "name": "sortDirection",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string",
+    "default": "asc"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/quotation-detail/search": {
+    "get": {
+    "tags": [
+    "quotation-detail-controller"
+    ],
+    "operationId": "getQuotationDetail_1",
+    "parameters": [
+    {
+    "name": "search",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    },
+    {
+    "name": "pageNo",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32",
+    "default": 0
+    }
+    },
+    {
+    "name": "pageSize",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32",
+    "default": 5
+    }
+    },
+    {
+    "name": "fieldName",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string",
+    "default": "id"
+    }
+    },
+    {
+    "name": "direction",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string",
+    "default": "ASC",
+    "enum": [
+    "ASC",
+    "DESC"
+    ]
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/price": {
+    "get": {
+    "tags": [
+    "pricing-controller"
+    ],
+    "operationId": "getPricing",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/orders": {
+    "get": {
+    "tags": [
+    "order-information-controller"
+    ],
+    "operationId": "getOrders",
+    "parameters": [
+    {
+    "name": "search",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    },
+    {
+    "name": "page",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32",
+    "default": 0
+    }
+    },
+    {
+    "name": "size",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32",
+    "default": 10
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/order-work-flow/{id}": {
+    "get": {
+    "tags": [
+    "order-work-flow-controller"
+    ],
+    "operationId": "retrieveOrderWorkFlowId",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/order-work-flow-search": {
+    "get": {
+    "tags": [
+    "order-work-flow-controller"
+    ],
+    "operationId": "searchWorkOrder_1",
+    "parameters": [
+    {
+    "name": "search",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    },
+    {
+    "name": "page",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32"
+    }
+    },
+    {
+    "name": "size",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "integer",
+    "format": "int32"
+    }
+    },
+    {
+    "name": "sortField",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string",
+    "default": "notes"
+    }
+    },
+    {
+    "name": "sortDirection",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string",
+    "default": "asc"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/material-request": {
+    "get": {
+    "tags": [
+    "material-request-controller"
+    ],
+    "operationId": "getAllOrById",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/inventory-fetch/{id}": {
+    "get": {
+    "tags": [
+    "inventory-controller"
+    ],
+    "operationId": "fetchInventory",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/delivery-details": {
+    "get": {
+    "tags": [
+    "delivery-controller"
+    ],
+    "operationId": "getDeliveryDetailsByOrderId",
+    "parameters": [
+    {
+    "name": "orderId",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    },
+    {
+    "name": "deliveryId",
+    "in": "query",
+    "required": false,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v1/employees": {
+    "get": {
+    "tags": [
+    "employee-controller"
+    ],
+    "operationId": "getEmployee",
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v2/delete-delivery": {
+    "delete": {
+    "tags": [
+    "delivery-controller"
+    ],
+    "operationId": "delete",
+    "parameters": [
+    {
+    "name": "deliveryId",
+    "in": "query",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/api/v1/employee-delete/{id}": {
+    "delete": {
+    "tags": [
+    "employee-controller"
+    ],
+    "operationId": "deleteEmployee",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "OK",
+    "content": {
+    "*/*": {
+    "schema": {
+    "$ref": "#/components/schemas/ResponseDTO"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "components": {
+    "schemas": {
+    "ResponseDTO": {
+    "type": "object",
+    "properties": {
+    "message": {
+    "type": "string"
+    },
+    "data": {
+    "type": "object"
+    },
+    "statusCode": {
+    "type": "integer",
+    "format": "int32"
+    }
+    }
+    },
+    "WorkOrderDTO": {
+    "type": "object",
+    "properties": {
+    "id": {
+    "type": "string"
+    },
+    "employeeId": {
+    "type": "string"
+    },
+    "orderId": {
+    "type": "string"
+    },
+    "customerId": {
+    "type": "string"
+    },
+    "startDate": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "tentativeEndDate": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "status": {
+    "type": "string"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedBy": {
+    "type": "string"
+    },
+    "is_removed": {
+    "type": "boolean"
+    }
+    }
+    },
+    "VendorDTO": {
+    "type": "object",
+    "properties": {
+    "vendorName": {
+    "type": "string"
+    },
+    "contactPerson": {
+    "type": "string"
+    },
+    "phoneNumber": {
+    "type": "string"
+    },
+    "email": {
+    "type": "string"
+    },
+    "website": {
+    "type": "string"
+    },
+    "address": {
+    "type": "string"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedBy": {
+    "type": "string"
+    }
+    }
+    },
+    "SpecificationDTO": {
+    "type": "object",
+    "properties": {
+    "tagWidth": {
+    "type": "number",
+    "format": "double"
+    },
+    "tagHeight": {
+    "type": "number",
+    "format": "double"
+    },
+    "material": {
+    "type": "string"
+    },
+    "letterColour": {
+    "type": "string"
+    },
+    "letterHeight": {
+    "type": "number",
+    "format": "double"
+    },
+    "background": {
+    "type": "string"
+    },
+    "thickness": {
+    "type": "number",
+    "format": "double"
+    },
+    "imageURL": {
+    "type": "string"
+    }
+    }
+    },
+    "QuotationDetailDTO": {
+    "type": "object",
+    "properties": {
+    "orderId": {
+    "type": "string"
+    },
+    "customerId": {
+    "type": "string"
+    },
+    "pricingId": {
+    "type": "string"
+    }
+    }
+    },
+    "PricingDTO": {
+    "type": "object",
+    "properties": {
+    "basePrice": {
+    "type": "number",
+    "format": "double"
+    },
+    "taxAmount": {
+    "type": "number",
+    "format": "double"
+    },
+    "discountAmount": {
+    "type": "number",
+    "format": "double"
+    },
+    "totalPrice": {
+    "type": "number",
+    "format": "double"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedBy": {
+    "type": "string"
+    }
+    }
+    },
+    "OrderInformationDTO": {
+    "type": "object",
+    "properties": {
+    "orderName": {
+    "type": "string"
+    },
+    "phoneNumber": {
+    "type": "string"
+    },
+    "archived": {
+    "type": "boolean"
+    },
+    "status": {
+    "type": "string"
+    },
+    "orderConfirmed": {
+    "type": "boolean"
+    },
+    "userId": {
+    "type": "string"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedBy": {
+    "type": "string"
+    },
+    "orderNumber": {
+    "type": "string"
+    },
+    "deleted": {
+    "type": "boolean"
+    }
+    }
+    },
+    "OrderWorkFlowDTO": {
+    "type": "object",
+    "properties": {
+    "loggedIn": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "orderChecked": {
+    "type": "boolean"
+    },
+    "productionProcessed": {
+    "type": "boolean"
+    },
+    "qualityChecked": {
+    "type": "boolean"
+    },
+    "deliveryInitiated": {
+    "type": "boolean"
+    },
+    "notes": {
+    "type": "string"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedBy": {
+    "type": "string"
+    },
+    "orderInformation": {
+    "type": "string"
+    },
+    "is_removed": {
+    "type": "boolean"
+    }
+    }
+    },
+    "OrderDetailDTO": {
+    "type": "object",
+    "properties": {
+    "orderInformationId": {
+    "type": "string"
+    },
+    "specificationId": {
+    "type": "string"
+    },
+    "pricingId": {
+    "type": "string"
+    },
+    "metaData": {
+    "type": "string"
+    },
+    "quantity": {
+    "type": "integer",
+    "format": "int32"
+    },
+    "createdAt": {
+    "type": "string",
+    "format": "date-time"
+    }
+    }
+    },
+    "Employee": {
+    "type": "object",
+    "properties": {
+    "id": {
+    "type": "string"
+    },
+    "address1": {
+    "type": "string"
+    },
+    "address2": {
+    "type": "string"
+    },
+    "state": {
+    "type": "string"
+    },
+    "city": {
+    "type": "string"
+    },
+    "zipcode": {
+    "type": "string"
+    },
+    "phoneNumber": {
+    "type": "string"
+    },
+    "email": {
+    "type": "string"
+    },
+    "createdAt": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "updatedAt": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "organizationUserId": {
+    "type": "string"
+    }
+    }
+    },
+    "Inventory": {
+    "type": "object",
+    "properties": {
+    "id": {
+    "type": "string"
+    },
+    "name": {
+    "type": "string"
+    },
+    "rawMaterialType": {
+    "type": "string"
+    },
+    "inStockQuantity": {
+    "type": "integer",
+    "format": "int32"
+    },
+    "vendor": {
+    "$ref": "#/components/schemas/Vendor"
+    },
+    "isRemoved": {
+    "type": "boolean"
+    },
+    "createdAt": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedAt": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "updatedBy": {
+    "type": "string"
+    }
+    }
+    },
+    "MaterialRequestDTO": {
+    "type": "object",
+    "properties": {
+    "inventory": {
+    "$ref": "#/components/schemas/Inventory"
+    },
+    "employee": {
+    "$ref": "#/components/schemas/Employee"
+    },
+    "vendor": {
+    "$ref": "#/components/schemas/Vendor"
+    },
+    "requestStatus": {
+    "type": "string"
+    },
+    "invoiceId": {
+    "type": "integer",
+    "format": "int32"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedBy": {
+    "type": "string"
+    }
+    }
+    },
+    "Vendor": {
+    "type": "object",
+    "properties": {
+    "id": {
+    "type": "string"
+    },
+    "vendorName": {
+    "type": "string"
+    },
+    "contactPerson": {
+    "type": "string"
+    },
+    "phoneNumber": {
+    "type": "string"
+    },
+    "email": {
+    "type": "string"
+    },
+    "website": {
+    "type": "string"
+    },
+    "address": {
+    "type": "string"
+    },
+    "createdAt": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedAt": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "updatedBy": {
+    "type": "string"
+    },
+    "isRemoved": {
+    "type": "boolean"
+    }
+    }
+    },
+    "InventoryDTO": {
+    "type": "object",
+    "properties": {
+    "name": {
+    "type": "string"
+    },
+    "rawMaterialType": {
+    "type": "string"
+    },
+    "inStockQuantity": {
+    "type": "integer",
+    "format": "int32"
+    },
+    "vendorId": {
+    "type": "string"
+    },
+    "isRemoved": {
+    "type": "boolean"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedBy": {
+    "type": "string"
+    }
+    }
+    },
+    "DeliveryDTO": {
+    "type": "object",
+    "properties": {
+    "deliveryAddress": {
+    "type": "string"
+    },
+    "city": {
+    "type": "string"
+    },
+    "state": {
+    "type": "string"
+    },
+    "zipCode": {
+    "type": "string"
+    },
+    "country": {
+    "type": "string"
+    },
+    "phoneNumber": {
+    "type": "string"
+    },
+    "deliveryStatus": {
+    "type": "string"
+    },
+    "trackingCompany": {
+    "type": "string"
+    },
+    "shippingMethod": {
+    "type": "string"
+    },
+    "estimatedDelivery": {
+    "type": "string"
+    },
+    "cost": {
+    "type": "number",
+    "format": "double"
+    },
+    "trackingLink": {
+    "type": "string"
+    },
+    "orderInformation": {
+    "$ref": "#/components/schemas/OrderInformation"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedBy": {
+    "type": "string"
+    },
+    "isDeleted": {
+    "type": "boolean"
+    }
+    }
+    },
+    "OrderInformation": {
+    "type": "object",
+    "properties": {
+    "id": {
+    "type": "string"
+    },
+    "orderName": {
+    "type": "string"
+    },
+    "phoneNumber": {
+    "type": "string"
+    },
+    "archived": {
+    "type": "boolean"
+    },
+    "status": {
+    "type": "string"
+    },
+    "orderConfirmed": {
+    "type": "boolean"
+    },
+    "orderConfirmedDate": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "workOrderReady": {
+    "type": "boolean"
+    },
+    "userId": {
+    "type": "string"
+    },
+    "createdAt": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "createdBy": {
+    "type": "string"
+    },
+    "updatedAt": {
+    "type": "string",
+    "format": "date-time"
+    },
+    "updatedBy": {
+    "type": "string"
+    },
+    "orderNumber": {
+    "type": "string"
+    },
+    "deleted": {
+    "type": "boolean"
+    }
+    }
+    },
+    "EmployeeDTO": {
+    "type": "object",
+    "properties": {
+    "address1": {
+    "type": "string"
+    },
+    "address2": {
+    "type": "string"
+    },
+    "state": {
+    "type": "string"
+    },
+    "city": {
+    "type": "string"
+    },
+    "zipcode": {
+    "type": "string"
+    },
+    "phoneNumber": {
+    "type": "string"
+    },
+    "email": {
+    "type": "string"
+    },
+    "organizationUserId": {
+    "type": "string"
+    }
+    }
+    },
+    "CustomerDTO": {
+    "type": "object",
+    "properties": {
+    "address1": {
+    "type": "string"
+    },
+    "address2": {
+    "type": "string"
+    },
+    "state": {
+    "type": "string"
+    },
+    "city": {
+    "type": "string"
+    },
+    "zipcode": {
+    "type": "string"
+    },
+    "phoneNumber": {
+    "type": "string"
+    },
+    "email": {
+    "type": "string"
+    },
+    "userId": {
+    "type": "string"
+    },
+    "organizationUserId": {
+    "type": "string"
+    }
+    }
+    },
+    "PaginationDTO": {
+    "type": "object",
+    "properties": {
+    "pageNo": {
+    "type": "integer",
+    "format": "int32"
+    },
+    "pageSize": {
+    "type": "integer",
+    "format": "int32"
+    },
+    "fieldName": {
+    "type": "string"
+    },
+    "direction": {
+    "type": "string",
+    "enum": [
+    "ASC",
+    "DESC"
+    ]
+    }
+    }
+    }
+    }
+    }
+    }

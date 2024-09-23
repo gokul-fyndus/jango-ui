@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+        "@rtk-query/codegen-openapi": "^1.0.0",
+        "esbuild-runner": "^2.2.2",
+        "ts-node": "^10.9.1"
+    },
+    "scripts": {
+        "app-api": "yarn && npx @rtk-query/codegen-openapi openapi-app-config.ts",
+        "auth-api": "yarn && npx @rtk-query/codegen-openapi openapi-auth-config.ts"
+    }
+}

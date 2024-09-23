@@ -1,0 +1,3 @@
+add the constants like 
+hard coded colors
+hard coded css

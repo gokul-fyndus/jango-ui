@@ -1,0 +1,5 @@
+add the common js functions
+Email validation
+phone number validation
+
+## you can create folder or use export and type the  functions here
