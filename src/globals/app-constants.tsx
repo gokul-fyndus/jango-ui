@@ -11,9 +11,8 @@ export const PATH = {
     LOGIN: "/login",
     CREATE_ACCOUNT: "/create-account",
     FORGOT_PASSWORD: "/forgot-password",
-    CUSTOMER: "/customer",
-    INDIVIDUAL_CUSTOMER: "/individual-customer",
-    EDIT_CUSTOMER_DETAILS: "/edit-customer-details",
-    ADD_CUSTOMER_DETAILS: "/add-customer-details",
+    ORDER_DETAILS :"/order-details",
+    INDIVIDUAL_ORDER:"/individual-order",
+    ADD_ORDER:"/add-order"
   },
 };
