@@ -5,6 +5,13 @@
 // } from "../pages/index";
 // import { PATH } from "../globals/app-constants";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { PATH } from "../globals/app-constants";
+import IndividualCustomer from "../shared/page/IndividualCustomer";
+import EditCustomerDetails from "../shared/page/EditCustomerDetails";
+import AddCustomerDetails from "../shared/page/AddCustomerDetails";
+import CustomerList from "../shared/page/CustomerList";
+
 const Routers = () => {
   const Layout = () => {
     return (
@@ -14,7 +21,8 @@ const Routers = () => {
       //     <Outlet />
       //   </Stack>
       // </Stack>
-      <></>
+      <>
+      </>
     );
   };
   return (
@@ -28,7 +36,17 @@ const Routers = () => {
     //     <Route path={PATH.PAGE.BILL_DETAILS} element={<BillDetails />} />
     //   </Route>
     // </Routes>
-    <></>
+    // <Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path={PATH.PAGE.CUSTOMER} element={<CustomerList/>} />
+        <Route path={PATH.PAGE.INDIVIDUAL_CUSTOMER} element={<IndividualCustomer />} />
+        <Route path={PATH.PAGE.EDIT_CUSTOMER_DETAILS} element={<EditCustomerDetails />} />
+        <Route path={PATH.PAGE.ADD_CUSTOMER_DETAILS} element={<AddCustomerDetails />} />
+        <Route />
+      </Routes>
+    </BrowserRouter>
+    // </Routes>
   );
 };
 

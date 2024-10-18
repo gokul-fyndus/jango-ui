@@ -10,6 +10,10 @@ export const PATH = {
     ABOUT: "/about-us",
     LOGIN: "/login",
     CREATE_ACCOUNT: "/create-account",
-    FORGOT_PASSWORD: "/forgot-password"
+    FORGOT_PASSWORD: "/forgot-password",
+    CUSTOMER: "/customer",
+    INDIVIDUAL_CUSTOMER: "/individual-customer",
+    EDIT_CUSTOMER_DETAILS: "/edit-customer-details",
+    ADD_CUSTOMER_DETAILS: "/add-customer-details",
   },
 };
