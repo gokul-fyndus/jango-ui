@@ -1,8 +1,8 @@
-const IndividualCustomer =()=>{
+const RetailCustomer =()=>{
     return(
         <div>
             <h1>Individual Customer</h1>
         </div>
     )
 }
-export default IndividualCustomer;
+export default RetailCustomer;

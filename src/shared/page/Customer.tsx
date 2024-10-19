@@ -1,8 +1,8 @@
-const CustomerList =()=>{
+const Customer =()=>{
     return(
         <div>
             <h1>Customer List</h1>
         </div>
     )
 }
-export default CustomerList;
+export default Customer;

@@ -7,10 +7,10 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PATH } from "../globals/app-constants";
-import IndividualCustomer from "../shared/page/IndividualCustomer";
-import EditCustomerDetails from "../shared/page/EditCustomerDetails";
-import AddCustomerDetails from "../shared/page/AddCustomerDetails";
-import CustomerList from "../shared/page/CustomerList";
+import Customer from "../shared/page/Customer";
+import CustomerDetails from "../shared/page/CustomerDetails";
+import RetrieveCustomerDetails from "../shared/page/RetrieveCustomerDetails";
+import RetailCustomer from "../shared/page/RetailCustomer";
 
 const Routers = () => {
   const Layout = () => {
@@ -39,12 +39,13 @@ const Routers = () => {
     // <Routes>
     <BrowserRouter>
       <Routes>
-        <Route path={PATH.PAGE.CUSTOMER} element={<CustomerList/>} />
-        <Route path={PATH.PAGE.INDIVIDUAL_CUSTOMER} element={<IndividualCustomer />} />
-        <Route path={PATH.PAGE.EDIT_CUSTOMER_DETAILS} element={<EditCustomerDetails />} />
-        <Route path={PATH.PAGE.ADD_CUSTOMER_DETAILS} element={<AddCustomerDetails />} />
+        <Route path={PATH.PAGE.CUSTOMER} element={<Customer />}/>
+        <Route path={PATH.PAGE.ADD_CUSTOMER} element={<CustomerDetails />} />
+        <Route path={PATH.PAGE.FETCH_CUSTOMER_DETAILS} element={<RetrieveCustomerDetails />} />
+        <Route path={PATH.PAGE.RETAIL_CUSTOMER} element={<RetailCustomer />} />
         <Route />
       </Routes>
+      <Layout />
     </BrowserRouter>
     // </Routes>
   );
