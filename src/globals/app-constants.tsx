@@ -12,10 +12,10 @@ export const PATH = {
     CREATE_ACCOUNT: "/create-account",
     FORGOT_PASSWORD: "/forgot-password",
     //Admin-Employee
-    EMPLYEE_LIST:"/employee/orders",
-    EMPLYEE_DETAILS:"/employee/:id",
-    ADD_EMPLYEE:"/add-employee",
-    EDIT_EMPLYEE:"/edit-employee",
+    EMPLOYEE_LIST:"/employee/orders",
+    EMPLOYEE_DETAILS:"/employee/:id",
+    ADD_EMPLOYEE:"/add-employee",
+    EDIT_EMPLOYEE:"/edit-employee",
     //Admin-Raw Materials
     RAW_MATERIALS_LIST:"/raw-material/orders",
     RAW_MATERIALS_DETAILS:"/raw-material/:id",
