@@ -6,11 +6,22 @@ import RawMaterialOrderList from "../shared/pages/rawMaterial/RawMaterialOrderLi
 import RawMaterialDetails from "../shared/pages/rawMaterial/RawMaterialDetails";
 import Employee from "../shared/pages/employee/Employee";
 import RawMaterial from "../shared/pages/rawMaterial/RawMaterial";
+import React from "react";
+import Customer from "../shared/pages/Customer/Customer";
+import CustomerDetails from "../shared/pages/Customer/CustomerDetails";
+import RetrieveCustomerDetails from "../shared/pages/Customer/RetrieveCustomerDetails";
+import RetailCustomer from "../shared/pages/Customer/RetailCustomer";
+import Order from "../shared/pages/Orders/Order";
+import RetailsOrders from "../shared/pages/Orders/RetailsOrders";
+import OrdersDetails from "../shared/pages/Orders/OrdersDetails";
+import OrdersView from "../shared/pages/Orders/OrdersView";
+import Tabstatus from "../shared/pages/Orders/TabStatus";
 // import {
 //   Login,
 //   CreateAccount,
 // } from "../pages/index";
 // import { PATH } from "../globals/app-constants";
+
 
 const Routers = () => {
   const Layout = () => {
@@ -21,7 +32,8 @@ const Routers = () => {
       //     <Outlet />
       //   </Stack>
       // </Stack>
-      <></>
+      <>
+      </>
     );
   };
   return (
@@ -46,6 +58,18 @@ const Routers = () => {
         <Route path={PATH.PAGE.RAW_MATERIALS_DETAILS} element={<RawMaterialDetails />}/>
         <Route path={PATH.PAGE.ADD_RAW_MATERIALS} element={<RawMaterial/>}/>
         <Route path={PATH.PAGE.EDIT_RAW_MATERIALS} element={<RawMaterial/>}/>
+        <Route path={PATH.PAGE.CUSTOMER} element={<Customer />}/>
+        <Route path={PATH.PAGE.ADD_CUSTOMER} element={<CustomerDetails />} />
+        <Route path={PATH.PAGE.FETCH_CUSTOMER_DETAILS} element={<RetrieveCustomerDetails />} />
+        <Route path={PATH.PAGE.RETAIL_CUSTOMER} element={<RetailCustomer />} />
+        <Route path={PATH.PAGE.ORDERS} element={<Order />} />
+        <Route path={PATH.PAGE.RETAILS_ORDERS} element={<RetailsOrders />} />
+        <Route path={PATH.PAGE.ADD_ORDERS} element={<OrdersDetails />} />
+        <Route path={PATH.PAGE.EDIT_ORDER} element={<OrdersDetails />} />
+        <Route path={PATH.PAGE.ORDER_DETAILS_VIEW} element={<OrdersView />} />
+        <Route path={PATH.PAGE.TAB_MANAGER_COMPLETED} element={<Tabstatus />} />
+        <Route path={PATH.PAGE.TAB_MANAGER_IN_PROGRESS} element={<Tabstatus />} />
+        <Route path={PATH.PAGE.TAB_MANAGER_TO_DO} element={<Tabstatus />} />
       </Routes>
     </BrowserRouter>
   );
