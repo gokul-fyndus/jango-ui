@@ -1,3 +1,5 @@
+import React from "react";
+
 const RetailCustomer =()=>{
     return(
         <div>
