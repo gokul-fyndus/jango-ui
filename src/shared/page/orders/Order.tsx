@@ -1,8 +1,10 @@
-const OrderDetails =()=>{
+import React from "react";
+
+const Order =()=>{
     return(
         <div>
             <h1>Order Details</h1>
         </div>
     )
 }
-export default OrderDetails;
+export default Order;

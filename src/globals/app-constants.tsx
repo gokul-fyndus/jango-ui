@@ -11,8 +11,14 @@ export const PATH = {
     LOGIN: "/login",
     CREATE_ACCOUNT: "/create-account",
     FORGOT_PASSWORD: "/forgot-password",
-    ORDER_DETAILS :"/order-details",
-    INDIVIDUAL_ORDER:"/individual-order",
-    ADD_ORDER:"/add-order"
+    ORDERS :"/orders",
+    ORDER_DETAILS:"/order-details",
+    ADD_ORDERS:"/add-orders",
+    EDIT_ORDER:"/edit-orders",
+    RETAILS_ORDERS : "/retails-orders",
+    ORDER_DETAILS_VIEW : "orders-view",
+    TAB_MANAGER_COMPLETED : "orders-completed",
+    TAB_MANAGER_TO_DO : "orders-to-do",
+    TAB_MANAGER_IN_PROGRESS : "orders-in-progress"
   },
 };

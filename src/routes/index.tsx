@@ -7,9 +7,12 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PATH } from "../globals/app-constants";
-import OrderDetails from "../shared/page/OrderDetails";
-import IndividualOrder from "../shared/page/IndividualOrder";
-import AddOrder from "../shared/page/AddOrder";
+import RetailsOrders from "../shared/page/orders/RetailsOrders";
+import React from "react";
+import Order from "../shared/page/orders/Order";
+import OrdersDetails from "../shared/page/orders/OrdersDetails";
+import OrdersView from "../shared/page/orders/OrdersView";
+import Tabstatus from "../shared/page/orders/TabStatus";
 
 const Routers = () => {
   const Layout = () => {
@@ -38,9 +41,14 @@ const Routers = () => {
     // <Routes>
     <BrowserRouter>
       <Routes>
-        <Route path={PATH.PAGE.ORDER_DETAILS} element={<OrderDetails />} />
-        <Route path={PATH.PAGE.INDIVIDUAL_ORDER} element={<IndividualOrder />} />
-        <Route path={PATH.PAGE.ADD_ORDER} element={<AddOrder />} />
+        <Route path={PATH.PAGE.ORDERS} element={<Order />} />
+        <Route path={PATH.PAGE.RETAILS_ORDERS} element={<RetailsOrders />} />
+        <Route path={PATH.PAGE.ADD_ORDERS} element={<OrdersDetails />} />
+        <Route path={PATH.PAGE.EDIT_ORDER} element={<OrdersDetails />} />
+        <Route path={PATH.PAGE.ORDER_DETAILS_VIEW} element={<OrdersView />} />
+        <Route path={PATH.PAGE.TAB_MANAGER_COMPLETED} element={<Tabstatus />} />
+        <Route path={PATH.PAGE.TAB_MANAGER_IN_PROGRESS} element={<Tabstatus />} />
+        <Route path={PATH.PAGE.TAB_MANAGER_TO_DO} element={<Tabstatus />} />
       </Routes>
     </BrowserRouter>
     // </Routes>

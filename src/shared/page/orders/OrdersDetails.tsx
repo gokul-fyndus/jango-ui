@@ -1,8 +1,10 @@
-const IndividualOrder =()=>{
+import React from "react";
+
+const OrdersDetails =()=>{
     return(
         <div>
             <h1>Individual Order</h1>
         </div>
     )
 }
-export default IndividualOrder;
+export default OrdersDetails;
